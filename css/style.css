@@ -152,3 +152,12 @@ svg.plot { background: #fff; }
   .field input[type=text] { max-width: none; }
 }
 @media print { .top, .foot, .actions { display: none; } }
+
+/* ===== Synchronisation en ligne ===== */
+.cloud-card { max-width: 960px; margin: 16px auto 0; padding: 16px clamp(14px, 3vw, 28px); background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); }
+.cloud-card h2 { margin-bottom: 6px; }
+.cloud-form { display: flex; flex-wrap: wrap; align-items: end; gap: 10px; margin: 10px 0; }
+.cloud-form label { display: flex; flex-direction: column; gap: 4px; font-size: .88rem; font-weight: 600; min-width: 180px; flex: 1 1 180px; }
+.cloud-form input { width: 100%; padding: 9px 10px; border: 1px solid var(--line); border-radius: 9px; background: var(--bg); }
+#cloud-status { margin: 8px 0 0; overflow-wrap: anywhere; }
+#cloud-status.cloud-error { color: var(--ko); }

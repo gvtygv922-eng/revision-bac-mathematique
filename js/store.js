@@ -21,7 +21,7 @@
     } catch (e) { memoryOnly = true; return blank(); }
   }
   let data = load();
-  function save() { try { G.localStorage.setItem(KEY, JSON.stringify(data)); } catch (e) { memoryOnly = true; } }
+  function save() { try { G.localStorage.setItem(KEY, JSON.stringify(data)); } catch (e) { memoryOnly = true; } try { if (RB.cloudSync) RB.cloudSync.scheduleUpload(); } catch (_) {} }
   S.isMemoryOnly = () => memoryOnly;
   S.data = () => data;
   S.save = save;

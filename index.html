@@ -16,17 +16,32 @@
     </nav>
   </header>
 
+  <section class="cloud-card" id="cloud-sync" aria-label="Synchronisation en ligne">
+    <h2>Synchronisation entre appareils</h2>
+    <p class="small-txt">Crée un compte gratuit ou connecte-toi pour retrouver ta progression sur tes autres appareils. Utilise la même adresse e-mail partout.</p>
+    <div class="cloud-form">
+      <label>E-mail<input id="cloud-email" type="email" autocomplete="email" placeholder="toi@exemple.fr"></label>
+      <label>Mot de passe<input id="cloud-password" type="password" autocomplete="current-password" minlength="8" placeholder="8 caractères minimum"></label>
+      <button class="btn primary" id="cloud-signup" type="button">Créer un compte</button>
+      <button class="btn" id="cloud-login" type="button">Se connecter</button>
+      <button class="btn" id="cloud-sync-now" type="button" hidden>Synchroniser maintenant</button>
+      <button class="btn" id="cloud-logout" type="button" hidden>Se déconnecter</button>
+    </div>
+    <p id="cloud-status" class="small-txt" role="status">Chargement du module de synchronisation…</p>
+  </section>
   <main id="app" aria-live="polite"></main>
 
   <footer class="foot">
     Les exercices <b>originaux</b> viennent de tes documents ; les exercices <b>générés</b> reprennent la même méthode avec d'autres nombres.
-    Ta progression est enregistrée dans ce navigateur uniquement.
+    Sans connexion, ta progression est enregistrée dans ce navigateur. Connecte-toi ci-dessus pour la synchroniser en ligne.
   </footer>
 
   <!-- ordre important : outils, correcteur, puis exercices, puis application -->
   <script src="js/core.js"></script>
   <script src="js/checker.js"></script>
   <script src="js/store.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/cloud-sync.js"></script>
   <script src="js/exercises/calcul.js"></script>
   <script src="js/exercises/pct.js"></script>
   <script src="js/exercises/algebre.js"></script>
